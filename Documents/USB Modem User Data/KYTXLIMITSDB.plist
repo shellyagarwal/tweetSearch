@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DAY</key>
+	<dict>
+		<key>CRITICAL</key>
+		<real>95</real>
+		<key>TYPE</key>
+		<string>DATA</string>
+		<key>VALUE</key>
+		<real>50</real>
+		<key>WARNING</key>
+		<real>85</real>
+	</dict>
+	<key>MONTH</key>
+	<dict>
+		<key>CRITICAL</key>
+		<real>95</real>
+		<key>TYPE</key>
+		<string>TIME</string>
+		<key>VALUE</key>
+		<real>3000</real>
+		<key>WARNING</key>
+		<real>85</real>
+	</dict>
+	<key>WARNINGCHECK</key>
+	<false/>
+	<key>fifteenMinutes</key>
+	<false/>
+</dict>
+</plist>

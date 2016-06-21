@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DAFTBOX</key>
+	<array/>
+	<key>INBOX</key>
+	<array>
+		<dict>
+			<key>BOX</key>
+			<string>INBOX</string>
+			<key>CONTENT</key>
+			<string>Dear Customer, We have registered your request. Your phone as modem will be activated shortly.</string>
+			<key>MSG_ID</key>
+			<integer>10000</integer>
+			<key>NUMBER</key>
+			<string>52811</string>
+			<key>READ</key>
+			<string>1</string>
+			<key>STORAGE</key>
+			<string>MAC</string>
+			<key>TIME</key>
+			<date>2016-06-11T01:23:21Z</date>
+		</dict>
+		<dict>
+			<key>BOX</key>
+			<string>INBOX</string>
+			<key>CONTENT</key>
+			<string>STV 277 RCd successful Enjoy Get 2GB 3G data for 28 days. Dial *129*1hash,Get 75 MB for Rs9 for 1 day. RGSM</string>
+			<key>MSG_ID</key>
+			<integer>10001</integer>
+			<key>NUMBER</key>
+			<string>52811</string>
+			<key>READ</key>
+			<string>1</string>
+			<key>STORAGE</key>
+			<string>MAC</string>
+			<key>TIME</key>
+			<date>2016-06-14T16:15:23Z</date>
+		</dict>
+	</array>
+	<key>MSG_MAXID</key>
+	<integer>10001</integer>
+	<key>OUTBOX</key>
+	<array/>
+	<key>SENDBOX</key>
+	<array/>
+	<key>SMS_VP</key>
+	<integer>0</integer>
+</dict>
+</plist>
