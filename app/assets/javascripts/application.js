@@ -1,0 +1,14 @@
+//= require jquery
+//= require angular
+//= require angular-cookie
+//= require ng-token-auth
+//= require angular-route
+//= require angular-ui-router
+//= require angular-resource
+//= require angular-animate
+//= require angular-aria
+//= require angular-material
+//= require angular-rails-templates
+//= require noty/js/noty/packaged/jquery.noty.packaged.min.js
+//= require bootstrap/dist/js/bootstrap
+//= require_tree .

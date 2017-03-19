@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tweet Search</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,200italic,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link href='/assets/angular-material/angular-material.css' rel='stylesheet' type='text/css'>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <base href="/">
+</head>
+<body ng-app="appname">
+
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <h2 flex md-truncate><a href="#" ui-sref="home">Tweets</a></h2>
+    </div>
+</md-toolbar>
+
+<div ui-view></div>
+
+</body>
+</html>

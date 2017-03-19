@@ -1,0 +1,43 @@
+<div class="row search-bar-row">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6 search-bar-col">
+    <form>
+      <div class="input-group">
+        <input type="text" class="form-control" ng-model="hashTag" placeholder="Search for hash tags, eg., #srk">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit" ng-click="fetchTweets()">Go!</button>
+        </span>
+      </div>
+    </form>
+    <br/>
+    <div layout="row" layout-sm="column" layout-align="space-around" ng-show="showLoading">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+
+    <div flex-xs flex-gt-xs="100" layout="column" ng-repeat="tweet in tweets" ng-hide="showLoading">
+      <md-card>
+        <md-card-header>
+          <md-card-avatar>
+            <img ng-src="{{tweet.profile_image_url}}" />
+          </md-card-avatar>
+          <md-card-header-text>
+            <span class="md-title">{{tweet.name}} | @{{tweet.scree_name}}</span>
+            <span class="md-subhead">on {{tweet.tweeted_at | date:'dd-MMM-yyyy hh:mm a'}}</span>
+          </md-card-header-text>
+        </md-card-header>
+        <img ng-src="{{tweet.media_url}}" class="md-card-image" alt="Washed Out" ng-if="tweet.media_url">
+        <md-card-content>
+          <p>
+            {{tweet.tweet_text}}
+          </p>
+          <p ng-if="tweet.post_url">
+            <a ng-href="{{tweet.post_url}}" target="_blank">{{tweet.post_url}}</a>
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="start center">
+          <a ng-href="{{tweet.tweet_link}}" target="_blank"><md-button>View</md-button></a>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>
