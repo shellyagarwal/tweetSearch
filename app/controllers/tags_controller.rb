@@ -1,0 +1,68 @@
+class TagsController < ApplicationController
+  before_action :set_tag, only: [:show, :update, :destroy]
+
+  # GET /tags
+  # GET /tags.json
+  def index
+    @tags = Tag.all
+
+    render json: @tags
+  end
+
+  # GET /tags/1
+  # GET /tags/1.json
+  def show
+    render json: @tag
+  end
+
+  # POST /tags
+  # POST /tags.json
+  def create
+    tag_params[:name] = tag_params[:name].downcase
+    @tag = Tag.find_by(name: tag_params[:name])
+    if @tag.nil?
+      @tag = Tag.new(tag_params)
+    end
+
+    if @tag.save
+      ids = @tag.fetch_tweets rescue nil
+      if ids.nil?
+        render json: {message: 'Something went wrong'}, status: :unprocessable_entity
+      else
+        render json: @tag, status: :created
+      end
+    else
+      render json: @tag.errors, status: :unprocessable_entity
+    end
+  end
+
+  # PATCH/PUT /tags/1
+  # PATCH/PUT /tags/1.json
+  def update
+    @tag = Tag.find(params[:id])
+
+    if @tag.update(tag_params)
+      head :no_content
+    else
+      render json: @tag.errors, status: :unprocessable_entity
+    end
+  end
+
+  # DELETE /tags/1
+  # DELETE /tags/1.json
+  def destroy
+    @tag.destroy
+
+    head :no_content
+  end
+
+  private
+
+    def set_tag
+      @tag = Tag.find(params[:id])
+    end
+
+    def tag_params
+      params.require(:tag).permit(:name, :last_tweet_id)
+    end
+end
